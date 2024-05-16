@@ -1,5 +1,3 @@
-// import { combineReducers} from "redux";
-// import { devToolsEnhancer } from "@redux-devtools/extension";
 
 import { configureStore } from "@reduxjs/toolkit";
 import { mailboxReducer } from "./mailbox/mailboxReducer";
@@ -16,15 +14,6 @@ import {
     REGISTER,
   } from "redux-persist";
   import storage from "redux-persist/lib/storage";
-
-
-
-// const rootReduser = combineReducers({
-//     mailbox: mailboxReduser
-// })
-
-// const enhancer = devToolsEnhancer()
-// export const store = createStore(rootReduser, enhancer)
 
 const mailboxPersistConfig = {
     key: "mailbox",
