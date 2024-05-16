@@ -1,0 +1,28 @@
+.object {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+};
+
+.desc {
+   margin-bottom: 15px;
+   font-size: 30px;
+   text-shadow: 1px 1px 2px;
+ }
+
+.mailBoxlist{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.mailBoxlist{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 15px;
+}

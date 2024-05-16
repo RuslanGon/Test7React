@@ -1,0 +1,11 @@
+.name {
+    display: flex;
+    align-items: center;
+}
+
+.color {
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+    margin-left: 6px;
+}
