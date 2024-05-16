@@ -15,7 +15,7 @@ export const useProductSearch = ({isSearchPage = false}) => {
     // const [query, setQuery] = useState('')
 
     const [searchParams, setSearchParams] = useSearchParams()
-    const query = searchParams.get('query')
+    // const query = searchParams.get('query')
   
     
     useEffect(() => {
@@ -24,22 +24,22 @@ export const useProductSearch = ({isSearchPage = false}) => {
     }, [dispatch, isSearchPage]);
   
   
-  useEffect(() => {
-  if(!query)return
-  async function fetchProductsByQuery() {
-    try {
-      setIsLoading(true);
-      const data = await reguestProductsByQuery(query);
-      setProducts(data.products);
-      // console.log(data);
-    } catch {
-      setIsError(true);
-    } finally {
-      setIsLoading(false);
-    }
-  }
-  fetchProductsByQuery();
-  },[query])
+  // useEffect(() => {
+  // if(!query)return
+  // async function fetchProductsByQuery() {
+  //   try {
+  //     setIsLoading(true);
+  //     const data = await reguestProductsByQuery(query);
+  //     setProducts(data.products);
+  //     // console.log(data);
+  //   } catch {
+  //     setIsError(true);
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // }
+  // fetchProductsByQuery();
+  // },[query])
   
   
   
