@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useRef, useState } from "react"
+import { Suspense, lazy, useEffect, useRef } from "react"
 import { Link, Route, Routes, useLocation, useParams } from "react-router-dom"
 
 
@@ -13,40 +13,18 @@ const ReviewsPage = lazy(() => import('./ReviewsPage'))
 
 
 const ProductDetailsPage = () => {
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [isError, setIsError] = useState(false);
 
   const location = useLocation()
   const backLinkRef = useRef(location.state ?? '/products')
-
   const {productId} = useParams()
-
-
   const dispatch = useDispatch()
+  
   const productDetails = useSelector(state => state.productDetails.productDetails)
   const isLoading = useSelector(state => state.productDetails.isLoading)
   const isError = useSelector(state => state.productDetails.isError)
   useEffect(() => {
-    dispatch(apiRequestProductDetailsById(productId))
-  }, [dispatch, productId])
-
-
-  // const [productDetails, setProductDetails] = useState(null)
-
-  // useEffect(() => {
-  //   async function fetchProductDetails() {
-  //     try {
-  //       setIsLoading(true);
-  //       const data = await reguestProductDetailsById(productId);
-  //       setProductDetails(data);
-  //     } catch (error) {
-  //       setIsError(true)
-  //     }finally{
-  //       setIsLoading(false);
-  //     }
-  //   }
-  //   fetchProductDetails();
-  // }, [productId]);
+    dispatch(apiRequestProductDetailsById(productId));
+  }, [dispatch, productId]);
 
   return (
     <div>
