@@ -9,7 +9,7 @@ const NotFoundPage = () => {
 const [timer, setTimer] = useState(0)
 
 // const dispatch = useDispatch();
-// const timer = useSelector(state => state.timer.timer)
+// const timer = useSelector(selectTimer)
 // dispatch(incrementTimer())
 
 

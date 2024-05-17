@@ -11,6 +11,7 @@ import {
   filterUser,
 } from "../redux/mailbox/mailboxReducer";
 import { selectFilter, selectUsers } from "../redux/mailbox/selectors";
+import MailBoxFilter from "../component/MailBoxFilter/MailBoxFilter";
 
 function MailBoxPage() {
   // const [filter, setFilter] = useState("");
@@ -46,9 +47,9 @@ function MailBoxPage() {
     dispatch(deleteUser(userId));
   };
 
-  const onChangeFilter = (event) => {
-    dispatch(filterUser(event.target.value));
-  };
+  // const onChangeFilter = (event) => {
+  //   dispatch(filterUser(event.target.value));
+  // };
   const filterUsers = useMemo(
     () =>
       users.filter(
@@ -69,13 +70,7 @@ function MailBoxPage() {
         </button>
       </section>
       <section>
-        <h2>Search users by name or email</h2>
-        <input
-          type="text"
-          placeholder="search..."
-          value={filter}
-          onChange={onChangeFilter}
-        />
+        <MailBoxFilter />
       </section>
       <MailBox
         boxTitle="Meest Express"
