@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   addUser,
   deleteUser,
-  filterUser,
+  // filterUser,
 } from "../redux/mailbox/mailboxReducer";
 import { selectFilter, selectUsers } from "../redux/mailbox/selectors";
 import MailBoxFilter from "../component/MailBoxFilter/MailBoxFilter";
