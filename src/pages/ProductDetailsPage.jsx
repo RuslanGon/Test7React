@@ -6,6 +6,7 @@ import Loader from "../component/Loader/Loader"
 import ErrorMessage from "../component/ErrorMessage/ErrorMessage"
 import { useDispatch, useSelector } from "react-redux"
 import { apiRequestProductDetailsById } from "../redux/productDetails/operation"
+import { selectProductDetails } from "../redux/productDetails/selectors"
 
 
 const CommentPage = lazy(() => import('./CommentPage'))
@@ -21,7 +22,7 @@ const ProductDetailsPage = () => {
 
 
   const dispatch = useDispatch()
-  const productDetails = useSelector(state => state.productDetails.productDetails)
+  const productDetails = useSelector(selectProductDetails)
   const isLoading = useSelector(state => state.productDetails.isLoading)
   const isError = useSelector(state => state.productDetails.isError)
   useEffect(() => {
