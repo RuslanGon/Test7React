@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { reguestProducts, reguestProductsByQuery } from "../serveses/api";
+// import { reguestProducts, reguestProductsByQuery } from "../serveses/api";
 import { useSearchParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { apiGetProducts } from "../redux/productDetails/operation";

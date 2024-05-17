@@ -10,6 +10,7 @@ import {
   deleteUser,
   filterUser,
 } from "../redux/mailbox/mailboxReducer";
+import { selectFilter, selectUsers } from "../redux/mailbox/selectors";
 
 function MailBoxPage() {
   // const [filter, setFilter] = useState("");
@@ -23,13 +24,9 @@ function MailBoxPage() {
 
   const dispatch = useDispatch();
 
-  const users = useSelector((state) => {
-    return state.mailbox.users;
-  });
+  const users = useSelector(selectUsers);
 
-  const filter = useSelector((state) => {
-    return state.mailbox.filter;
-  });
+  const filter = useSelector(selectFilter);
 
   const [counter, setCounter] = useState(0);
 
